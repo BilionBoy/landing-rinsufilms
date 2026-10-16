@@ -1,0 +1,8 @@
+.git
+.gitignore
+.DS_Store
+**/.DS_Store
+Iniciar.command
+README.md
+docker-compose.yml
+.swp
