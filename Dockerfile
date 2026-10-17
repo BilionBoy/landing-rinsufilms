@@ -7,7 +7,7 @@ WORKDIR /site
 COPY dist/ ./
 # Remove o que não é do site e pré-comprime os textos (o Nginx serve o .gz direto).
 RUN find . -name '.DS_Store' -delete \
- && find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.svg' -o -name '*.ttf' \) \
+ && find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.svg' -o -name '*.ttf' -o -name '*.webmanifest' \) \
       -exec gzip -9 -k -n {} \; \
  && find . -type d -exec chmod 755 {} \; \
  && find . -type f -exec chmod 644 {} \;
